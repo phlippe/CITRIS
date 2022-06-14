@@ -1,0 +1,1 @@
+from models.ae.lightning_module import Autoencoder

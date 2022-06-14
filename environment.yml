@@ -1,0 +1,23 @@
+name: citris
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch=1.10.0
+  - torchvision=0.11.1
+  - torchaudio=0.10.0
+  - cudatoolkit=11.2
+  - pytorch-lightning=1.6.0
+  - imageio
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - tqdm
+  - notebook
+  - ipywidgets
+  - pip
+  - pip:
+    - gdown

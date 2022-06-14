@@ -1,0 +1,1 @@
+from models.icitris_vae.lightning_module import iCITRISVAE

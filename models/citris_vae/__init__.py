@@ -1,0 +1,1 @@
+from models.citris_vae.lightning_module import CITRISVAE
