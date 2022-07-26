@@ -375,7 +375,7 @@ class TransitionPrior(nn.Module):
         # In Normalizing Flows, we do not have a KL divergence to easily regularize with lambda_reg.
         # Instead, we regularize the Gumbel Softmax parameters to maximize the probability for psi(0).
         if self.lambda_reg > 0.0 and self.training:
-            target_params_soft = torch.softmax(target_params, dim=-1)
+            target_params_soft = torch.softmax(self.target_params, dim=-1)
             nll = nll + self.lambda_reg * (1-target_params_soft[:,-1]).mean(dim=0)
         
         return nll

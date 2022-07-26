@@ -244,7 +244,7 @@ class CITRISVAE(pl.LightningModule):
                                                   logger=self if not self.hparams.cluster_logging else None, 
                                                   target=target,
                                                   transition_prior=self.prior_t1)
-        loss = loss + loss_model + loss_z * self.hparams.beta_classifier
+        loss = loss + (loss_model + loss_z) * self.hparams.beta_classifier
 
         # Logging
         self.log(f'{mode}_kld_t1', kld_t1_all.mean() / (imgs.shape[1]-1))
