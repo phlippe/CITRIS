@@ -104,11 +104,17 @@ See the additional README in the folder `experiments/` for further details and e
 If you use this code or find it otherwise helpful, please consider citing our work:
 ```bibtex
 @inproceedings{lippe2022citris,
-    title        = {{CITRIS: Causal Identifiability from Temporal Intervened Sequences}},
-    author       = {Lippe, Phillip and Magliacane, Sara and L{\"o}we, Sindy and Asano, Yuki M. and Cohen, Taco and Gavves, Efstratios},
-    year         = {2022},
-    booktitle    = {Proceedings of the 39th International Conference on Machine Learning, {ICML} 2022},
-    url          = {https://arxiv.org/abs/2202.03169}
+   title        = {{CITRIS}: Causal Identifiability from Temporal Intervened Sequences},
+   author       = {Lippe, Phillip and Magliacane, Sara and L{\"o}we, Sindy and Asano, Yuki M and Cohen, Taco and Gavves, Stratis},
+   year         = {2022},
+   month        = {17--23 Jul},
+   booktitle    = {Proceedings of the 39th International Conference on Machine Learning},
+   publisher    = {PMLR},
+   series       = {Proceedings of Machine Learning Research},
+   volume       = {162},
+   pages        = {13557--13603},
+   url          = {https://proceedings.mlr.press/v162/lippe22a.html},
+   editor       = {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan}
 }
 ```
 ```bibtex
