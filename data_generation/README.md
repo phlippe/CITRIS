@@ -11,7 +11,8 @@ The first step is to generate a sequence of latent factors, which is implemented
 #### Requirements
 
 * Install Blender 2.93.8 (newer versions may not be supported)
-* Download the [`data`](https://github.com/brendel-group/cl-ica/tree/master/tools/3dident/data) folder and place in `temporal_causal3dident/data/`
+* Download the [`data`](https://github.com/brendel-group/cl-ica/tree/master/tools/3dident/data) folder and place it in `temporal_causal3dident/data/`
+* Download the [`render_utils.py`](https://github.com/brendel-group/cl-ica/blob/master/tools/3dident/render_utils.py) file and place it in `temporal_causal3dident/`
 * Add the blender files for the 6 additional shapes ([Armadillo](http://graphics.stanford.edu/data/3Dscanrep/), [Bunny](http://graphics.stanford.edu/data/3Dscanrep/), [Cow](https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/#spot), [Dragon](http://graphics.stanford.edu/data/3Dscanrep/), [Head](https://gfx.cs.princeton.edu/proj/sugcon/models/), [Horse](https://www.cc.gatech.edu/projects/large_models/horse.html)) to the folder `temporal_causal3dident/data/shapes/`. The shapes may have to be converted to Blender files first, and rescaled to a suitable size first. Please respect the licenses of the individual shapes. We do not include these shapes here due to the licenses. However, if interested, we can provide them upon request (please send a mail to p.lippe@uva.nl).
 
 ### Interventional Pong
