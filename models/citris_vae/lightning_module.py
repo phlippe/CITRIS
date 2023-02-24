@@ -260,6 +260,8 @@ class CITRISVAE(pl.LightningModule):
         """ Generates the triplet prediction of input image pairs and causal mask """
         input_imgs = imgs[:,:2].flatten(0, 1)
         z_mean, z_logstd = self.encoder(input_imgs)
+        if self.hparams.use_flow_prior:
+            z_mean, _ = self.flow(z_mean)
         input_samples = z_mean
         input_samples = input_samples.unflatten(0, (-1, 2))
         # Map the causal mask to a latent variable mask
@@ -272,6 +274,8 @@ class CITRISVAE(pl.LightningModule):
         mask_1 = (target_assignment[None,:,:] * (1 - source[:,None,:])).sum(dim=-1)
         mask_2 = 1 - mask_1
         triplet_samples = mask_1 * input_samples[:,0] + mask_2 * input_samples[:,1]
+        if self.hparams.use_flow_prior:
+            triplet_samples = self.flow.reverse(triplet_samples)
         # Decode the new combination
         triplet_rec = self.decoder(triplet_samples)
         if self.output_to_input is not None:
