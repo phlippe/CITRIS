@@ -7,7 +7,7 @@
 [![Paper 2 (iCITRIS)](https://img.shields.io/static/v1.svg?logo=arxiv&label=Paper&message=iCITRIS&color=green)](http://arxiv.org/abs/2206.06169)
 [![Datasets](https://img.shields.io/static/v1.svg?logo=zenodo&label=Zenodo&message=Download%20Datasets&color=blue)](https://zenodo.org/record/6570441#.Yqgr_9JBxCA)
 
-This is the official code repository for the papers **"CITRIS: Causal Identifiability from Temporal Intervened Sequences"** (ICML 2022) and **"iCITRIS: Causal Representation Learning for Instantaneous Temporal Effects"**, by Phillip Lippe, Sara Magliacane, Sindy Löwe, Yuki M. Asano, Taco Cohen, and Efstratios Gavves.
+This is the official code repository for the papers **"CITRIS: Causal Identifiability from Temporal Intervened Sequences"** (ICML 2022) and **"Causal Representation Learning for Instantaneous and Temporal Effects in Interactive Systems"** (ICLR 2023), by Phillip Lippe, Sara Magliacane, Sindy Löwe, Yuki M. Asano, Taco Cohen, and Efstratios Gavves.
 
 ## Paper summary
 
@@ -19,7 +19,7 @@ Understanding the latent causal factors of a dynamical system from visual observ
 <img src="figures/citris_figure.png" width="80%" align="center"/>
 </p>
 
-### iCITRIS: Causal Representation Learning for Instantaneous Temporal Effects
+### Causal Representation Learning for Instantaneous and Temporal Effects in Interactive Systems
 
 Causal representation learning is the task of identifying the underlying causal variables and their relations from high-dimensional observations, such as images. Recent work has shown that one can reconstruct the causal variables from temporal sequences of observations under the assumption that there are no instantaneous causal relations between them. In practical applications, however, our measurement or frame rate might be slower than many of the causal effects. This effectively creates "instantaneous" effects and invalidates previous identifiability results. To address this issue, we propose iCITRIS, a causal representation learning method that can handle instantaneous effects in temporal sequences when given perfect interventions with known intervention targets. iCITRIS identifies the causal factors from temporal observations, while simultaneously using a differentiable causal discovery method to learn their causal graph. In experiments on three video datasets, iCITRIS accurately identifies the causal factors and their causal graph.
 
@@ -118,12 +118,12 @@ If you use this code or find it otherwise helpful, please consider citing our wo
 }
 ```
 ```bibtex
-@article{lippe2022icitris,
-    title        = {{iCITRIS: Causal Representation Learning for Instantaneous Temporal Effects}},
-    author       = {Lippe, Phillip and Magliacane, Sara and L{\"o}we, Sindy and Asano, Yuki M. and Cohen, Taco and Gavves, Efstratios},
-    year         = {2022},
-    journal      = {arXiv preprint arXiv:2206.06169},
-    url          = {https://arxiv.org/abs/2206.06169}
+@inproceedings{lippe2023causal,
+    title        = {Causal Representation Learning for Instantaneous and Temporal Effects in Interactive Systems},
+    author       = {Phillip Lippe and Sara Magliacane and Sindy L{\"o}we and Yuki M Asano and Taco Cohen and Efstratios Gavves},
+    year         = 2023,
+    booktitle    = {The Eleventh International Conference on Learning Representations},
+    url          = {https://openreview.net/forum?id=itZ6ggvMnzS}
 }
 ```
 
